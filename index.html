@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Halaman Login -->
+        <div class="card" id="loginPage">
+            <h1>LOGIN</h1>
+            <p>Silakan masuk ke akun Anda</p>
+
+            <input type="text" id="loginUsername"
+                placeholder="Masukkan username">
+
+            <input type="password" id="loginPassword"
+                placeholder="Masukkan password">
+
+            <button onclick="login()">Masuk</button>
+
+            <p>
+                Belum punya akun?
+                <a href="#" onclick="showRegister()">Daftar</a>
+            </p>
+        </div>
+
+        <!-- Halaman Registrasi -->
+        <div class="card hidden" id="registerPage">
+            <h1>DAFTAR AKUN</h1>
+            <p>Buat akun baru Anda</p>
+
+            <input type="text" id="registerUsername"
+                placeholder="Buat username">
+
+            <input type="password" id="registerPassword"
+                placeholder="Buat password">
+
+            <button onclick="register()">Daftar</button>
+
+            <p>
+                Sudah punya akun?
+                <a href="#" onclick="showLogin()">Login</a>
+            </p>
+        </div>
+
+        <!-- Halaman Dashboard -->
+        <div class="card hidden" id="dashboard">
+            <h1>DASHBOARD</h1>
+
+            <h2 id="welcomeUser"></h2>
+
+            <p>Anda berhasil login ke aplikasi.</p>
+
+            <button onclick="logout()">Keluar</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
